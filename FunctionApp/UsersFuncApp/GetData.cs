@@ -6,19 +6,19 @@ using Microsoft.Extensions.Logging;
 
 namespace UsersFuncApp
 {
-    public static class Function1
+    public static class GetData
     {
-        [Function("Function1")]
+        [Function("GetData")]
         public static HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
             FunctionContext executionContext)
         {
-            var logger = executionContext.GetLogger("Function1");
+            var logger = executionContext.GetLogger("GetData");
             logger.LogInformation("C# HTTP trigger function processed a request.");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Welcome to Azure Functions!");
+            response.WriteString("Welcome to Azure GetData func!");
 
             return response;
         }
