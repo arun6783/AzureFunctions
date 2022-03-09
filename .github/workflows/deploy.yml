@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Function App UsersFuncApp20220309170428
+name: Build and deploy .NET Core application to Function App azureusersfunc
 on:
   push:
     branches:
     - main
 env:
-  AZURE_FUNCTIONAPP_NAME: UsersFuncApp20220309170428
+  AZURE_FUNCTIONAPP_NAME: azureusersfunc
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
